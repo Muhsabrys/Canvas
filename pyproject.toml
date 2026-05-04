@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "canvas-facilitator"
+version = "0.1.0"
+description = "A tool that facilitates creating Canvas LMS activities"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.28.0",
+    "click>=8.1.0",
+]
+
+[project.scripts]
+canvas-facilitator = "canvas_facilitator.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
